@@ -1,0 +1,19 @@
+{
+  "name": "informalize",
+  "version": "0.0.0",
+  "description": "",
+  "author": "informalize <t12.rehan@gmail.com>",
+  "main": "functions/__main__.js",
+  "dependencies": {},
+  "private": true,
+  "stdlib": {
+    "build": "faaslang",
+    "name": "informalize/informalize",
+    "timeout": 10000,
+    "publish": true,
+    "personalize": {
+      "keys": [],
+      "user": []
+    }
+  }
+}

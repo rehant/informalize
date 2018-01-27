@@ -5,6 +5,6 @@
 */
 module.exports = (name = 'world', context, callback) => {
 
-  callback(null, `hello ${name}`);
+  callback(null, `Informalize says hello ${name}`);
 
 };

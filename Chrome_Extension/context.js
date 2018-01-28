@@ -37,8 +37,13 @@ function onClickHandler(info, tab) {
     
     lib.gimmetendo.getExcerpt({search: info.selectionText}, (err, result) => {
        
-    
-	localStorage.setItem("excerpt",result);
+    if (result===null) {
+      localStorage.setItem("excerpt","Sorry, no selection found for selected item.");
+
+    }
+    else{
+      localStorage.setItem("excerpt",result);
+    }
         
         
     //alert(result);

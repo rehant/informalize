@@ -18,7 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('readystatechange', function() {
     if (document.readyState === "complete") {
         document.getElementById("wikip").click();}
-		document.getElementById("generate-here").innerHTML = '<ol><li>' + localStorage.getItem("excerpt") + '</li></ol>';
+		document.getElementById("generate-title").innerHTML =  localStorage.getItem("title");
+        document.getElementById("generate-wiki").innerHTML =  localStorage.getItem("excerpt");
+        document.getElementById("generate-wolfram").innerHTML =  localStorage.getItem("wolfram");
   });
 
 function openCity(evt, cityName) {

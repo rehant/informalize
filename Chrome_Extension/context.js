@@ -30,8 +30,7 @@ function onClickHandler(info, tab) {
   // handle result
 
       });
-    
-    
+       
     
     
     
@@ -43,9 +42,13 @@ function onClickHandler(info, tab) {
         
         
     //alert(result);
-		var win = window.open("window/window.html");
+		//var win = window.open("window/window.html");
 
-    //document.getElementById("generage-here").innerHTML = result;
+        
+        var win = window.open("window/window.html", "Title", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=780,height=600,top="+(screen.height-400)+",left="+(screen.width-840));
+    
+        win.document.title="Informalyze";
+        //document.getElementById("generage-here").innerHTML = result;
 
     // var fragment = create(result); 
     // win.getElementById("generate-here").appendChild(fragment);

@@ -1,12 +1,8 @@
-*{
-    margin:0;
-    padding:0;
-}
+
 html {
     height: 100%;
     box-sizing: border-box;
-    margin:0;
-    padding:0;
+
 }
 
 b{
@@ -20,6 +16,10 @@ body{
     min-height: 100%;
     background-color: #FFFFFF;
 }
+
+#generate-title{
+    padding-left:10px;
+}
 /*#header{
     width:100%;
     background-color:#1BB280;
@@ -30,10 +30,44 @@ body{
 
 h2{
     font-size: 30px;
-    color:black;
+    color:white;
     font-family: "Helvetica";
     letter-spacing: 2px;
+    margin-top:0;
 
+    
+}
+
+b{
+    color:#1BB280;
+    
+}
+p{
+    padding-left:15px;
+}
+
+ul {
+  list-style-type: none; /* no default bullets */
+    
+}
+
+li { 
+}
+
+li:before { /* the custom styled bullets */
+  background-color: #1BB280;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 2px;
+  height: 5px;
+  width: 5px;
+}
+
+
+#generate-title{
+    background-color:#1BB280;
 }
 
 
@@ -43,8 +77,8 @@ h2{
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 1rem;
-    background-color: #222222;
+    padding: 0.5rem;
+    background-color: #333333;
 }
 #centerthis{
     margin-left: auto;
@@ -62,9 +96,9 @@ h2{
     transition: 0.3s;
     color: #FFFFFF;
     font-family: "Century Gothic";
-    font-size: 17px;
+    font-size: 12px;
     border-radius:15px;
-    background-color: #222222;
+    background-color: #333333;
     color:white;
     letter-spacing: 1px;
 
@@ -72,7 +106,7 @@ h2{
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    background-color: #05310A;
+    background-color: #1BB280;
 }
 
 /* Create an active/current tablink class */

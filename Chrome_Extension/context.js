@@ -18,7 +18,9 @@ function onClickHandler(info, tab) {
   //window.open(url, '_blank');
     lib.gimmetendo.service({search: info.selectionText}, (err, result) => {
        
-        alert(result);
+        //alert(result);
+		var win = window.open("", "Title", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=780,height=200,top="+(screen.height-400)+",left="+(screen.width-840));
+		win.document.body.innerHTML = result;
         chrome.extension.getBackgroundPage().console.log(result);
         // console.log(result);
   // handle result

@@ -8,10 +8,6 @@ chrome.runtime.onInstalled.addListener(function() {
                                          "id": "context" + context});  
 });
 
-var sTitle = "";
-var excerpt = "";
-var wolframResults="";
-
 // add click event
 chrome.contextMenus.onClicked.addListener(onClickHandler);
 
@@ -29,6 +25,7 @@ function onClickHandler(info, tab) {
        
         //alert(result);
 		title=result;
+		localStorage.setItem("title", result);
         // console.log(result);
   // handle result
 
@@ -41,8 +38,8 @@ function onClickHandler(info, tab) {
     
     lib.gimmetendo.getExcerpt({search: info.selectionText}, (err, result) => {
        
-     
-    excerpt = result;
+    
+	localStorage.setItem("excerpt",result);
         
         
     //alert(result);
@@ -65,6 +62,8 @@ function onClickHandler(info, tab) {
      
         
         wolframResults=result;
+		
+		localStorage.setItem("wolfram", result);
         //alert(result);
 	/*	var win = window.open("", "HELLO WORLD", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=780,height=200,top="+(screen.height-400)+",left="+(screen.width-840));
             win.document.title = title;

@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('readystatechange', function() {
     if (document.readyState === "complete") {
         document.getElementById("wikip").click();}
-        document.getElementById("generate-here").innerHTML = '<ol><li>' + excerpt + '</li></ol>';
+        document.getElementById("generate-here").innerHTML = '<ol><li>' + "test" + '</li></ol>';
   });
 
 function openCity(evt, cityName) {

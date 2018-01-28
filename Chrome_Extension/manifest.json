@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "Getting started example",
+  "name": "Informalize",
   "description": "This extension allows the user to change the background color of the current page.",
   "version": "1.0",
 
@@ -11,6 +11,13 @@
   },
   "permissions": [
     "activeTab",
-    "storage"
-  ]
+    "storage",
+	"contextMenus"
+  ],
+  "background": {
+    "scripts": ["context.js"]
+  },
+  "icons": {
+	"16": "small_icon.png"
+  }
 }

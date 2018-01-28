@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     var wikip = document.getElementById('wikip');
     var wolframa = document.getElementById('wolframa');
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('readystatechange', function() {
     if (document.readyState === "complete") {
         document.getElementById("wikip").click();}
+        document.getElementById("generate-here").innerHTML = '<ol><li>' + excerpt + '</li></ol>';
   });
 
 function openCity(evt, cityName) {
@@ -39,5 +41,3 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
-
-

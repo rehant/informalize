@@ -8,6 +8,8 @@ chrome.runtime.onInstalled.addListener(function() {
                                          "id": "context" + context});  
 });
 
+var sTitle = "";
+var excerpt = "";
 var wolframResults="";
 
 // add click event
@@ -18,6 +20,7 @@ function onClickHandler(info, tab) {
  //   var xhr=XMLHttpRequest();
 
     var sText = info.selectionText;
+    sTitle = sText;
   //var url = "https://www.google.com/search?q=" + encodeURIComponent(sText);  
   //window.open(url, '_blank');
     var title;
@@ -29,7 +32,7 @@ function onClickHandler(info, tab) {
         // console.log(result);
   // handle result
 
-});
+      });
     
     
     
@@ -39,22 +42,21 @@ function onClickHandler(info, tab) {
     lib.gimmetendo.getExcerpt({search: info.selectionText}, (err, result) => {
        
      
+    excerpt = result;
         
         
-    alert(result);
+    //alert(result);
 		var win = window.open("window/window.html");
 
     //document.getElementById("generage-here").innerHTML = result;
-    //var fragment = create(result); 
-    var generateHere = win.getElementById("generate-here");
-    generateHere.innerHTML = result;
 
-    win.getElementById("generate-here").appendChild(fragment);
+    // var fragment = create(result); 
+    // win.getElementById("generate-here").appendChild(fragment);
 
 		//win.document.body.innerHTML =header+'<div id="Wiki" class="tabcontent" style="display: all;">'+result+'</div>'+footer;
 
 
-});
+  });
     
     
     
@@ -70,37 +72,7 @@ function onClickHandler(info, tab) {
 		win.document.body.innerHTML =header+'<div id="Wolfram" class="tabcontent" style="display: all;">'+result+'</div>'+footer;
 */
 
-});   
-
-
-function create(htmlStr) {
-    var frag = document.createDocumentFragment(),
-        temp = document.createElement('div');
-    temp.innerHTML = htmlStr;
-    while (temp.firstChild) {
-        frag.appendChild(temp.firstChild);
-      }
-        return frag;
-    }
-
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  });   
 
 };
+

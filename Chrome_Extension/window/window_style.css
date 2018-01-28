@@ -3,8 +3,8 @@
     padding:0;
 }
 html {
-  height: 100%;
-  box-sizing: border-box;
+    height: 100%;
+    box-sizing: border-box;
     margin:0;
     padding:0;
 }
@@ -20,24 +20,22 @@ body{
     min-height: 100%;
     background-color: #FFFFFF;
 }
-#header{
+/*#header{
     width:100%;
     background-color:#1BB280;
-margin:0;
-}
+    margin:0;
+}*/
+
+
 
 h2{
     font-size: 30px;
-    color:white;
-        font-family: "Helvetica";
+    color:black;
+    font-family: "Helvetica";
     letter-spacing: 2px;
 
 }
 
-.main{
-    font-size: 16px;
-    color: #000000;
-}
 
 .tab {
     overflow: hidden;

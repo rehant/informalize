@@ -1,6 +1,6 @@
 // Set up context menu at install time.
-var header='<head><title>informalyze</title><link rel="stylesheet" type="text/css" href="window_style.css"><script src="window_script.js"></script></head>';
-var footer='<table id="centerthis"><tr><td><button class="tablinks" onclick="openCity(event, "Wiki")" id="def">Wiki</button></td><td> <button class="tablinks" onclick="openCity(event, "Wolfram")">Wolfram</button></td> <td> <button class="tablinks" onclick="openCity(event, "etc")">etc</button></td></tr></table>';
+//var header='<head><title>informalyze</title><link rel="stylesheet" type="text/css" href="window_style.css"><script src="window_script.js"></script></head>';
+//var footer='<table id="centerthis"><tr><td><button class="tablinks" onclick="openCity(event, "Wiki")" id="def">Wiki</button></td><td> <button class="tablinks" onclick="openCity(event, "Wolfram")">Wolfram</button></td> <td> <button class="tablinks" onclick="openCity(event, "etc")">etc</button></td></tr></table>';
 chrome.runtime.onInstalled.addListener(function() {
   var context = "selection";
   var title = "Informalyze";
@@ -41,11 +41,17 @@ function onClickHandler(info, tab) {
      
         
         
-        //alert(result);
-		var win = window.open("", "HELLO WORLD", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=780,height=200,top="+(screen.height-400)+",left="+(screen.width-840));
-            win.document.title = title;
+    alert(result);
+		var win = window.open("window/window.html");
 
-		win.document.body.innerHTML =header+'<div id="Wiki" class="tabcontent" style="display: all;">'+result+'</div>'+footer;
+    //document.getElementById("generage-here").innerHTML = result;
+    //var fragment = create(result); 
+    var generateHere = win.getElementById("generate-here");
+    generateHere.innerHTML = result;
+
+    win.getElementById("generate-here").appendChild(fragment);
+
+		//win.document.body.innerHTML =header+'<div id="Wiki" class="tabcontent" style="display: all;">'+result+'</div>'+footer;
 
 
 });
@@ -65,6 +71,20 @@ function onClickHandler(info, tab) {
 */
 
 });   
+
+
+function create(htmlStr) {
+    var frag = document.createDocumentFragment(),
+        temp = document.createElement('div');
+    temp.innerHTML = htmlStr;
+    while (temp.firstChild) {
+        frag.appendChild(temp.firstChild);
+      }
+        return frag;
+    }
+
+
+
     
     
     

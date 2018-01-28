@@ -1,6 +1,22 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var wikip = document.getElementById('wikip');
+    var wolframa = document.getElementById('wolframa');
+    var etcd = document.getElementById('etcd');
+    // onClick's logic below:
+    wikip.addEventListener('click',function() {
+        openCity(event, 'Wiki');
+    });
+    wolframa.addEventListener('click', function() {
+        openCity(event, 'Wolfram');
+    });
+    etcd.addEventListener('click', function() {
+        openCity(event, 'etc');
+    });
+});
+
 document.addEventListener('readystatechange', function() {
     if (document.readyState === "complete") {
-document.getElementById("def").click();    }
+        document.getElementById("wikip").click();}
   });
 
 function openCity(evt, cityName) {
@@ -23,4 +39,5 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
 

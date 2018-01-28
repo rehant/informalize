@@ -2,18 +2,17 @@
 <html>
 <head>
 	<title>informalyze</title>
-	<link rel="stylesheet" type="text/css" href="window_style.css">
+	<link rel="stylesheet" type="text/css" href="window_style.css"/>
 	<script src="window_script.js"></script>
 </head>
 <body>
-	<div class="main">
 		<!-- Tab content -->
 		<div id="Wiki" class="tabcontent" style="display: all;">
-            
-        <div id="header">
-		  <h2>Title</h2>
-            </div>
-		  <p>EXCERPT goes here</p>
+		<h2>Title</h2>
+		<p><div id="generate-here">
+    <!-- Here is generated content -->
+		</div>	
+		</p>
 		</div>
 
 		<div id="Wolfram" class="tabcontent">
@@ -25,20 +24,19 @@
 		  <h2>TITLE</h2>
 		  <p>EXCERPT</p>	
 		</div>
-	</div>
-			<div class="tab">
+	<div class="tab">
 	<table id="centerthis">
 	<tr>
-		<td>
-			  <button class="tablinks" onclick="openCity(event, 'Wiki')" id="def">Wiki</button>
+			<td>
+			  <button class="tablinks" id="wikip">Wiki</button>
 			</td>
 			<td>
-			  <button class="tablinks" onclick="openCity(event, 'Wolfram')">Wolfram</button>
-			  </td>
+			  <button class="tablinks" id="wolframa">Wolfram</button>
+			</td>
 
-			  <td>
-			  <button class="tablinks" onclick="openCity(event, 'etc')">etc</button>
-		</td>
+			<td>
+			  <button class="tablinks" id="etcd">etc</button>
+			</td>
 		</tr>
 	</table>
 		</div>

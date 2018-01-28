@@ -7,6 +7,6 @@ function genericOnClick(info, tab) {
 }
 
 var context = "selection"
-var title = "Inform Wolfram"
+var title = "informalize"
 var id = chrome.contextMenus.create({"title": title, "contexts":[context],
                                        "onclick": genericOnClick});

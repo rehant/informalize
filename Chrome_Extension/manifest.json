@@ -12,7 +12,12 @@
   "permissions": [
     "activeTab",
     "storage",
-	"contextMenus"
+	"contextMenus",
+     "http://*/*",
+    "https://*/*",
+    "https://www.google.com/*",
+    "http://www.google.com/*",
+    "http://*/"
   ],
   "background": {
     "scripts": ["context.js","lib.js"]

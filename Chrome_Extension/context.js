@@ -11,8 +11,21 @@ chrome.contextMenus.onClicked.addListener(onClickHandler);
 
 // The onClicked callback function.
 function onClickHandler(info, tab) {
-  var sText = info.selectionText;
+ //   var xhr=XMLHttpRequest();
+
+    var sText = info.selectionText;
   //var url = "https://www.google.com/search?q=" + encodeURIComponent(sText);  
   //window.open(url, '_blank');
-    alert("The Keyword is: "+sText);
+    lib.gimmetendo.service({search: info.selectionText}, (err, result) => {
+       
+        alert(result);
+        chrome.extension.getBackgroundPage().console.log(result);
+        // console.log(result);
+  // handle result
+
+});
+    
+    
+    
+
 };

@@ -32,7 +32,7 @@ function onClickHandler(info, tab) {
     
     
     
-    lib.gimmetendo.getExcerpt({search: info.selectionText}, (err, result) => {
+    lib.gimmetendo.getWolfram({search: info.selectionText}, (err, result) => {
        
         //alert(result);
 		var win = window.open("", "HELLO WORLD", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=780,height=200,top="+(screen.height-400)+",left="+(screen.width-840));

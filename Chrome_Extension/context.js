@@ -1,12 +1,18 @@
+// Set up context menu at install time.
+chrome.runtime.onInstalled.addListener(function() {
+  var context = "selection";
+  var title = "Informalize";
+  var id = chrome.contextMenus.create({"title": title, "contexts":[context],
+                                         "id": "context" + context});  
+});
 
-// A generic onclick callback function.
-function genericOnClick(info, tab) {
-  console.log("item " + info.menuItemId + " was clicked");
-  console.log("info: " + JSON.stringify(info));
-  console.log("tab: " + JSON.stringify(tab));
-}
+// add click event
+chrome.contextMenus.onClicked.addListener(onClickHandler);
 
-var context = "selection"
-var title = "informalize"
-var id = chrome.contextMenus.create({"title": title, "contexts":[context],
-                                       "onclick": genericOnClick});
+// The onClicked callback function.
+function onClickHandler(info, tab) {
+  var sText = info.selectionText;
+  //var url = "https://www.google.com/search?q=" + encodeURIComponent(sText);  
+  //window.open(url, '_blank');
+    alert("The Keyword is: "+sText);
+};

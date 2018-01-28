@@ -15,7 +15,7 @@
 	"contextMenus"
   ],
   "background": {
-    "scripts": ["context.js"]
+    "scripts": ["context.js","lib.js"]
   },
   "icons": {
 	"16": "small_icon.png"

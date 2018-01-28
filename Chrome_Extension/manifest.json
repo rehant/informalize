@@ -20,7 +20,7 @@
     "http://*/"
   ],
   "background": {
-    "scripts": ["context.js","lib.js"]
+    "scripts": ["context.js","lib.js","window_script.js"]
   },
   "icons": {
 	"16": "small_icon.png"

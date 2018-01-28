@@ -1,0 +1,21 @@
+{
+  "name": "getWolfram",
+  "version": "0.0.5",
+  "description": "",
+  "author": "gimmetendo <alitalha786@hotmail.com>",
+  "main": "functions/__main__.js",
+  "dependencies": {
+    "request": "^2.83.0"
+  },
+  "private": true,
+  "stdlib": {
+    "build": "faaslang",
+    "name": "gimmetendo/getWolfram",
+    "timeout": 10000,
+    "publish": true,
+    "personalize": {
+      "keys": [],
+      "user": []
+    }
+  }
+}
